@@ -1,0 +1,1204 @@
+           select alvara-esp assign '/d/dados/alvara-esp'
+                  organization  is  indexed
+                  access mode   is  dynamic
+                  record key    is  alv-chave
+                  file status   is  ws-status.  
+           select arqcusto assign '/d/dados/arqcusto'
+		  organization    is indexed
+		  access mode     is dynamic
+		  record key      is ch-custo
+		  file status     is ws-status.
+           select arq-fant assign '/d/dados/arq-fant'
+                  organization is indexed
+                  access mode  is dynamic   
+                  record key   is fa-chave
+                  file status  is ws-status. 
+      *
+	   select arqhorta assign '/d/dados/arqhorta'
+                  organization    is indexed
+                  access mode     is dynamic
+                  record key      is ch-ah 
+                  file status     is ws-status.
+           select arqmsgn  assign '/d/dados/arqmsgn'    
+                  organization    is indexed
+                  access mode     is dynamic
+                  record key      is msgn-chave
+                  file status     is ws-status.    
+           select arqpesq  assign '/d/dados/arqpesq'   
+                  organization    is indexed
+                  access mode     is dynamic
+                  record key      is apq-chave
+                  file status     is ws-status.  
+           select arqsap assign '/d/dados/arqsap' 
+                  organization  is indexed
+                  access mode   is dynamic
+                  record key    is as-chave
+                  file status   is ws-status.
+
+      *----------------------------------------------------------------*
+      * objetivo ....: acumula valores da convocacao ativa (60 dias)   *
+      * desenvolvedor: jorge                                           *
+      * data ........: 17/09/2049                                      *
+      *----------------------------------------------------------------*
+
+	   select balance assign          '/d/dados/balance'
+                  organization            is indexed
+                  access mode             is dynamic
+                  record key              is blc-chave
+                  file status             is ws-status.
+    
+           select banco assign '/d/dados/banco'
+                  organization   indexed
+                  access mode    dynamic
+                  record key     bc-cod
+                  file status    ws-status.
+           select bloqm001 assign '/d/dados/bloqm001'
+                  organization    is indexed
+                  access mode     is dynamic
+                  record key      is b001-chave
+		  file status     is ws-status.  
+           select blqgrupo assign '/d/dados/blqgrupo'
+                  organization    is indexed
+                  access mode     is dynamic
+                  record key      is blqgrp-chave 
+                  file status     is ws-status.
+       select blqprod assign  '/d/dados/blqprod'
+	      organization    is indexed
+	      access mode     is dynamic
+	      record key      is blqp-chave
+	      file status     is ws-status.
+           select blqzona assign '/d/dados/blqzona'  
+                  organization   is indexed
+                  access mode    is dynamic 
+                  record key     is bz-chave
+                  file status    is ws-status.
+           select boavi assign          '/d/dados/boavi'     
+                  organization          is indexed
+                  access mode           is dynamic
+                  record key            is ch-boavi 
+		  alternate record key  is ch2-boavi with duplicates
+		  alternate record key  is ch3-boavi with duplicates
+		  alternate record key  is ch4-boavi with duplicates
+		  alternate record key  is ch5-boavi with duplicates
+                  file status           is ws-status.
+           select bo assign            '/d/dados/bo'
+                  organization         is indexed
+                  access mode          is dynamic 
+                  record key           is s-chave-1
+                  alternate record key is s-chave-2 with duplicates
+                  file status          is ws-status.
+
+           select cadbanco  assign '/d/dados/cadbanco'  
+		  organization     is indexed
+		  access mode      is dynamic
+		  record key       is cadbco-chave
+		  file status      is ws-status.  
+      *----------------------------------------------------------------*     
+      *                                                                *
+      * projeto ........: controle de caixas.                          *
+      * sistema ........: expedicao                                    *
+      * objetivo .......: movementacao das caixas.                     *
+      * eh povoado pelo :                                              *
+      * programador ....: otavio                                       *
+      * data ...........: 22/02/2013                                   *
+      *                                                                *
+      *                                                                *
+      *----------------------------------------------------------------*     
+
+      *|---|-----------------------------------------------------------|
+
+	   select cadcaixa    assign '/d/dados/cadcaixa'
+		  organization       is indexed
+		  access mode        is dynamic
+		  record key         is ccx-chave
+		  alternate record key is ccx-cod-cliente 
+					  with duplicates
+		  file status        is ws-status.
+
+      *|---|-----------------------------------------------------------|
+           select caddocas    assign        '/d/dados/caddocas'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is dcs-chave
+                  file status               is ws-status.
+           select cadfunci    assign        '/d/dados/cadfunci'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is cfnc-chave
+                  file status               is ws-status.
+    
+           select cadgen2 assign     '/d/dados/cadgen2'
+		  organization       is indexed
+                  access mode        is dynamic
+		  record key         is cg2-chave
+		  file status        is ws-status.   
+           select cadgen assign      '/d/dados/cadgen'
+		  organization       is indexed
+                  access mode        is dynamic
+		  record key         is cgn-chave
+		  file status        is ws-status.   
+           select cadprodol assign '/d/dados/cadprodol'
+		  organization   is indexed
+		  access mode    is dynamic
+		  record key     is prodol-chave
+		  file status    ws-status.
+      *---------------------------------------------------------------*
+      *            projeto resid.                                     *
+      *                                                               *
+      * objetivo ...: cadastar rede ou cliente no criterio de resid.  *
+      * sistema ....: wms                                             *
+      * logistica ..:                                                 *
+      * gerente ....:                                                 *
+      * programador.: otavio                                          *
+      * data .......: 02/07/2015                                      *
+      *                                                               *
+      *---------------------------------------------------------------*
+      *|---|-----------------------------------------------------------|
+
+	   select cadresid    assign        '/d/dados/cadresid'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is crs-chave
+                  file status               is ws-status.
+    
+        select cadstk281  assign    '/d/dados/cadstk281'
+	       organization         is indexed           
+	       access mode          is dynamic     
+	       record key           is stk281-chave
+	       file status          is ws-status.
+
+
+           select cadusuarios assign '/d/dados/cadusuarios'
+                  organization  is indexed
+                  access mode   is dynamic
+		  record key    is cadus-chave
+                  file status   is ws-status.
+           select cadvar  assign '/d/dados/cadvar'   
+ 	          organization is indexed
+ 	          access mode  is dynamic
+ 	          record key   is cv-chave-i   
+		  alternate record key is cv-chave-ii = cv-ano,  
+							cv-mes,
+							cv-dia,
+							cv-rota-f
+		  with duplicates
+ 	          file status  is ws-status.
+	   select categ-grp assign '/d/dados/categ-grp'
+		  organization    is indexed
+		  access mode     is dynamic
+		  record key      is grp-chave  
+		  file status     is ws-status. 
+	   select categoria assign '/d/dados/categoria'  
+		  organization    is indexed
+		  access mode     is dynamic
+		  record key      is categ-chave
+		  file status     is ws-status.  
+      *|---|---------------------------|-------------------------------|
+      *            projeto alterar lote e/ou vencimento da etiqueta.  *
+      *                                                               *
+      * objetivo ...: cadastar rede ou cliente para permitir alterar. *
+      * sistema ....: wms                                             *
+      * logistica ..: raphael tavares'                                *
+      * gerente ....:                                                 *
+      * programador.: otavio                                          *
+      * data .......: 14/03/2019                                      *
+      *                                                               *
+      *|---|---------------------------|-------------------------------|
+
+	   select cdaltlot    assign        '/d/dados/cdaltlot'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is cal-chave
+                  file status               is ws-status.
+    
+      *|---|---------------------------|-------------------------------|
+      *    projeto : cadastro de clientes com diferencial.             *
+      *                                                                *
+      *    objetivo: cadastro de clientes ou rede para diferenciar dos *
+      * demais.                                                        *
+      *                                versao 1.0 otavio 02fev2023     *
+      *                                                                *
+      *|---|---------------------------|-------------------------------|
+
+	   select cdclired    assign        '/d/dados/cdclired'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is ccrd-chave
+                  file status               is ws-status.
+    
+	   select chavenfe   assign '/d/dados/chavenfe' 
+		  organization   is indexed
+		  access mode    is dynamic
+		  record key     is chavenfe-acesso
+		  file status    is ws-status.      
+      *|---|---------------------------|-------------------------------|
+      *                      projeto lean.                            *
+      *                                                               *
+      * objetivo ...: criar chave para o endereco de linha.           *
+      * sistema ....: wms                                             *
+      * logistica ..:                                                 *
+      * gerente ....:                                                 *
+      * programador.: otavio                                          *
+      * data .......: 04/jul/2019                                     *
+      *                                                               *
+      *|---|---------------------------|-------------------------------|
+
+	   select chendlin    assign        '/d/dados/chendlin'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is celn-endlinha  
+		  alternate record key      is celn-codproduto
+					       with duplicates
+                  file status               is ws-status.
+    
+           select cidadeuf assign  '/d/dados/cidadeUF'
+                  organization     is indexed
+                  access mode      is dynamic
+                  record key       is cidadeuf-chave
+		  file status      is ws-status.
+	   select classif assign '/d/dados/classif'
+		  organization    is indexed
+		  access mode     is dynamic
+		  record key      is classif-chave
+		  file status     is ws-status.
+      *----------------------------------------------------------------*     
+      *                                                                *
+      * projeto ........: controle de caixas.                          *
+      * sistema ........: expedicao                                    *
+      * objetivo .......: cadastro de redes e cliente.                 *
+      * eh povoado pelo :                                              *
+      * programador ....: otavio                                       *
+      * data ...........: 22/03/2013                                   *
+      *                                                                *
+      *                                                                *
+      *----------------------------------------------------------------*     
+
+      *|---|-----------------------------------------------------------|
+
+	   select clicaixa    assign '/d/dados/clicaixa'
+		  organization       is indexed
+		  access mode        is dynamic
+		  record key         is clc-chave
+		  file status        is ws-status.
+           select clidpara assign '/d/dados/clidpara'           
+		  organization    is indexed
+		  access mode     is dynamic
+		  record key      is cpr-chave
+		  file status     is ws-status.
+
+           select clienteclf assign '/d/dados/clienteclf' 
+                  organization  is indexed
+                  access mode   is dynamic
+		  record key    is clieclf-chave
+                  file status   is ws-status.  
+           select condfaixa assign '/d/dados/condfaixa'
+                  organization    is indexed
+                  access mode     is dynamic
+                  record key      is faixa-chave
+                  file status     is ws-status.
+           select condgrade assign '/d/dados/condgrade'
+		  organization     is indexed
+		  access mode      is dynamic
+		  record key       is grade-chave
+		  file status      is ws-status.
+           select condtpcli assign '/d/dados/condtpcli'
+		  organization     is indexed
+		  access mode      is dynamic
+		  record key       is cndtc-chave
+		  file status      is ws-status.
+           select condvdpar     assign '/d/dados/condvdpar'
+                  organization         is indexed
+                  access mode          is dynamic
+                  record key           is vdpar-chave
+                  file status          is ws-status.
+           select confclie   assign         '/d/dados/confclie'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is ccl1-chave
+                  file status               is ws-status.
+    
+           select confclired assign         '/d/dados/confclired'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is ccl-chave
+                  file status               is ws-status.
+    
+           select confende   assign         '/d/dados/confende'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is cee-chave
+                  file status               is ws-status.
+    
+           select confends   assign         '/d/dados/confends'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is ces-chave
+                  file status               is ws-status.
+    
+           select confinteli assign         '/d/dados/confinteli'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is cci-chave
+                  file status               is ws-status.
+    
+           select confprod   assign         '/d/dados/confprod'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is ccp-chave
+                  file status               is ws-status.
+    
+           select confrota   assign         '/d/dados/confrota'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is crt-chave
+                  file status               is ws-status.
+    
+      *|---|---------------------------|-------------------------------|
+      *                  projeto lean - conferencia zero.             *
+      *                                                               *
+      * objetivo ...: cadastro de conferencia para viabilizar a redu- *
+      *               cao da conferencia.                             *
+      * sistema ....: wms                                             *
+      * logistica ..: gustavo pires.                                  *
+      * gerente ....:                                                 *
+      * programador.: otavio                                          *
+      * data .......: 11/nov/2019                                     *
+      *                                                               *
+      *|---|---------------------------|-------------------------------|
+
+	   select confzero    assign        '/d/dados/confZero'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is czr-chave
+                  file status               is ws-status.
+    
+           select contacor    assign        '/d/dados/contacor'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is ccs-chave
+                  file status               is ws-status.
+	   select contrcarro assign '/d/dados/contrcarro'
+		  organization   is indexed
+		  access mode    is dynamic
+		  record key     is ctc-chave
+		  file status    is ws-status.
+
+	   select cubetas  assign '/d/dados/cubetas' 
+		  organization    is indexed
+		  access mode     is dynamic
+		  record key      is cub-chave
+		  alternate record key is cub-rota with duplicates
+		  alternate record key is cub-cliente with duplicates
+		  alternate record key is cub-datasai with duplicates
+		  file status     is ws-status.
+
+           select descnf   assign  '/d/dados/descnf'
+                  organization is indexed
+                  access mode  is dynamic
+                  record key   is descnf-chave-1
+	          alternate record key is chave-desc-cli = 
+				          descnf-cliente 
+				          descnf-flag     
+					  with duplicates
+                  file status  is ws-status.
+           select difbbs  assign '/d/dados/difbbs'             
+		  organization   is indexed
+		  access mode    is dynamic
+		  record key     is bbs-chave
+		  file status    is ws-status. 
+
+      *----------------------------------------------------------------*     
+      *                                                                *
+      * projeto ........: protocolo de devolucao.                      *
+      * sistema ........: expedicao                                    *
+      * objetivo .......: cadastrar os motivos de cancelamento         *
+      * eh povoado pelo :                                              *
+      * programador ....: marco                                        *
+      * data ...........: 19/07/2013                                   *
+      *                                                                *
+      *                                                                *
+      *----------------------------------------------------------------*     
+
+      *|---|-----------------------------------------------------------|
+
+	   select dschiscancel  assign '/d/dados/dschiscancel'
+		  organization       is indexed
+		  access mode        is dynamic
+		  record key         is dsch-chave
+		  file status        is ws-status.
+
+           select eanmult assign       '/d/dados/eanmult'
+		  organization         is indexed
+		  access mode          is dynamic
+		  record key           is em-chave  
+		  alternate record key is em-chave2 with duplicates
+		  file status          is ws-status.
+
+	   select empresa  assign '/d/dados/empresas'
+		  organization    is indexed
+		  access mode     is dynamic
+		  record key      is emp-chave
+		  file status     is ws-status.
+           select endentrg  assign '/d/dados/endentrg'           
+		  organization     is indexed
+		  access mode      is dynamic
+		  record key       is eet-chave
+		  file status      is ws-status.
+
+           select estados  assign '/d/dados/estadosn'
+		  organization    is indexed
+		  access mode     is dynamic
+		  record key      is est-chave
+		  alternate record key is est-chave-alt 
+		  file status     is ws-status.
+           select etiqprofor assign         '/d/dados/etiqprofor'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is epf-chave
+                  file status               is ws-status.
+    
+           select excecao assign '/d/dados/excecao'
+                  organization    is indexed
+                  access mode     is dynamic
+                  record key      is ecc-chave
+                  file status     is ws-status.
+           select excmsgn  assign '/d/dados/excmsgn'    
+                  organization    is indexed
+                  access mode     is dynamic
+                  record key      is exgn-chave
+                  file status     is ws-status.    
+      * programador.: jorge                                           *
+      * data .......: 03/01/2023                                      *
+      *                                                               *
+      *---------------------------------------------------------------*
+
+	   select excresid    assign        '/d/dados/excresid'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is exr-chave
+                  file status               is ws-status.
+    
+      *|---|---------------------------|-------------------------------|
+      *    inclusao de quebra do romaneio por restricao de validade.   *
+      *                                            25/out/2019 otavio  *
+      *|---|---------------------------|-------------------------------|
+	   
+	   select excvalid assign '/d/dados/excvalid'   
+                  organization    is indexed
+                  access mode     is dynamic
+                  record key      is excv-chave
+                  file status     is ws-status.      
+           select fastrack assign '/d/dados/fastrack'
+                  organization    is indexed
+                  access mode     is dynamic
+                  record key      is fst-chave
+                  file status     is ws-status.
+
+	   select fat-fer  assign    '/d/dados/fat-fer'
+		  organization       is indexed 
+		  access mode        is dynamic     
+		  record key         is ff-chave
+		  file status        is ws-status.
+           select geogrpar    assign        '/d/dados/geogrpar'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is grp1-chave
+                  file status               is ws-status.
+    
+
+           select grupofor assign  '/d/dados/grupofor' 
+                  organization     is indexed
+                  access mode      is dynamic
+                  record key       is gf-chave
+                  file status      is ws-status. 
+
+
+
+
+            select grupotv       assign      '/d/dados/grupotv' 
+                   organization              is indexed
+                   access mode               is dynamic
+                   record key                is grtv-chave
+                   alternate key             is grtv-chave-alt 
+                   file status               is ws-status.   
+      *|---|---------------------------|-------------------------------|
+      *             projeto: controle de saldo na linha.               *
+      *                                                                *
+      *    historico de movimentacao no canal.      otavio 12/mar/2020 *
+      *|---|---------------------------|-------------------------------|
+           select hiscanal assign      '/d/dados/hiscanal'
+                  organization         is indexed
+                  access mode          is dynamic
+                  record key           is hcn-chave
+		  alternate record key is hcn-chavealt =
+					  hcn-produto
+					  hcn-data-wms
+					  hcn-hora-wms
+					  hcn-sequenciainc
+					  with duplicates 
+                  file status          is ws-status.   
+      *----------------------------------------------------------------*     
+      *                                                                *
+      * projeto ........: protocolo de devolucao                       *
+      * sistema ........: expedicao                                    *
+      * objetivo .......: historico de protocolo de devolucao          *
+      * eh povoado pelo :                                              *
+      * analista .......: marco                                        *
+      * data ...........: 05/06/2013                                   *
+      *                                                                *
+      *                                                                *
+      *----------------------------------------------------------------*     
+
+      *|---|-----------------------------------------------------------|
+
+	   select hisprotdev     assign '/d/dados/hisprotdev' 
+		  organization       is indexed
+		  access mode        is dynamic
+		  record key         is hisprotdev-chave
+		  file status        is ws-status.    
+           select ictlnumg assign '/d/dados/ictlnumg'           
+		  organization    is indexed
+		  access mode     is dynamic
+		  record key      is cng-chave
+		  file status     is ws-status.
+
+           select idocped assign     '/d/dados/idocped'
+		  organization       is indexed
+                  access mode        is dynamic
+		  record key         is ipd-chave
+		  file status        is ws-status.   
+           select intsap assign '/d/dados/intsap'
+                  organization    is indexed
+                  access mode     is dynamic
+                  record key      is its-chave
+                  file status     is ws-status.
+           select invnumcon assign '/d/dados/invnumcon'
+                  organization     is indexed
+                  access mode      is dynamic
+                  record key       is invnumcon-chave
+                  file status      is ws-status.
+           select linhinvp assign '/d/dados/linhinvp'           
+		  organization    is indexed
+		  access mode     is dynamic
+		  record key      is ipr-chave
+		  file status     is ws-status.
+
+           select lotevezn assign '/d/dados/lotevezn'
+	          organization   is indexed
+	          access mode    is dynamic
+	          record key     is lvzn-chave
+		  file status    is ws-status.    
+           select matricul assign '/d/dados/matricul'           
+		  organization    is indexed
+		  access mode     is dynamic
+		  record key      is mtr-chave
+		  alternate record key is mtr-senha 
+		  file status     is ws-status.
+
+           select metaprio    assign        '/d/dados/metaprio'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is mpr-chave
+                  file status               is ws-status.
+    
+      *----------------------------------------------------------------*
+      *       select do arquivo modulo do fechamento                   *
+      *                                                                *
+      * em: 22/01/2007 - adilson / marco / otavio                      *
+      *----------------------------------------------------------------*
+       
+          select modfec   assign '/d/dados/modfec'
+                 organization is indexed
+                 access mode  is dynamic
+                 record key   is mod-chave
+                 file status  is ws-status.
+           select motcanmin  assign  '/d/dados/motcanmin'
+                  organization     is indexed        
+                  access mode      is dynamic
+                  record key       is motcan-chave
+                  file status      is ws-status.
+
+           select nfentrada assign '/d/dados/nfentrada'
+		  organization     is indexed
+		  access mode      is dynamic
+		  record key       is nfe-chave
+*-------> retirando nfe-nfentrada de chave alternada 08/12/2015 marco
+*                 alternate record key  is nfe-nfentrada 
+*                                       with duplicates
+*-------> retirando nfe-nfentrada de chave alternada 08/12/2015 marco
+                  alternate record key  is nfe-planilha 
+                                        with duplicates
+		  file status      is ws-status.
+
+           select nomefant  assign '/d/dados/nomefant'           
+		  organization     is indexed
+		  access mode      is dynamic
+		  record key       is nft-chave
+		  alternate record key is nft-chave-alt with
+					 duplicates
+		  file status      is ws-status.
+
+
+           select notapt   assign   '/d/dados/notapt' 
+                  organization      is indexed
+                  access mode       is dynamic
+                  record key        is pt-chave
+                  file status       is ws-status.   
+
+           select notlot  assign '/d/dados/notlot'             
+		  organization   is indexed
+		  access mode    is dynamic
+		  record key     is nlt-chave 
+		  alternate record key is nlt-chave2 with duplicates
+		  file status    is ws-status.
+
+           select numpedol assign '/d/dados/numpedol'
+                  organization    is indexed
+                  access mode     is dynamic
+                  record key      is numpol-chave
+                  alternate record key is chave-ped = 
+					  numpol-data 
+					  numpol-pedido
+					  with duplicates   
+                  file status     is ws-status.
+           select olcodcli assign '/d/dados/olcodcli'
+                  organization    is indexed
+                  access mode     is dynamic
+                  record key      is olcli-chave 
+                  file status     is ws-status.
+           select olprojeto assign '/d/dados/olprojeto'
+                  organization    is indexed
+                  access mode     is dynamic
+                  record key      is olproj-chave 
+                  file status     is ws-status.
+           select olprovedor assign '/d/dados/olprovedor'
+                  organization    is indexed
+                  access mode     is dynamic
+                  record key      is olprov-chave
+                  file status     is ws-status.
+           select operadora assign '/d/dados/operadora'
+                  organization        is indexed
+                  access mode         is dynamic
+                  record key          is oper-codigo
+                  file status         is ws-status.
+      *---------------------------------------------------------------*
+      *                     projeto napolitano                        *
+      *                                                               *
+      * objetivo:    blocado - cadastro do palete final do produto.   *
+      * gerencia:    logistica.                                       *
+      * data:        24/01/2018.                                      *
+      * programador: otavio                                           *
+      * programas:                                                    *
+      *                                                               *
+      *---------------------------------------------------------------*
+      *|---|-----------------------------------------------------------|
+	   select paleprod    assign        '/d/dados/paleprod'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is plp-chave 
+		  alternate record key      is plp-produto
+					       with duplicates
+                  file status               is ws-status.
+    
+           select pdf1 assign      '/d/dados/pdf1'
+                  organization     is indexed
+                  access mode      is dynamic
+                  record key       is cf1chave
+                  alternate record key cf1chave2 with duplicates
+                  file status      is ws-status.
+        select pednfsap assign  '/d/dados/pednfsap'  
+	       organization     is indexed           
+	       access mode      is dynamic     
+	       record key       is pednfsap-chave
+	       file status      is ws-status.
+           select peem assign          '/d/dados/peem'
+                  organization         is indexed
+                  access mode          is dynamic
+                  record key           is pee-chave
+                  alternate record key is pee-canal-peem 
+                                          with duplicates
+                  alternate record key is pee-endereco-kf
+                                          with duplicates
+                  file status          is ws-status.
+           select pfc11 assign   '/d/dados/pfc11'
+                  organization   is indexed
+                  access mode    is dynamic
+                  record key     is c11chave
+                  alternate record key is c11chave-alt
+		  file status    is ws-status.
+           select pfc12c assign '/d/dados/pfc12c'
+                  organization  is indexed
+                  access mode   is dynamic
+                  record key    is c12chave
+                  file status   is ws-status.
+           select pfc2   assign '/d/dados/pfc2'
+                  organization  is indexed
+                  access mode   is dynamic
+                  record key    is c2codigo
+                  file status   is ws-status.
+
+           select pfc2s1 assign '/d/dados/pfc2s1'
+                  organization  is indexed
+                  access mode   is dynamic
+                  record key    is c2s1chave
+                  file status   is ws-status.
+           select pfc3a assign  '/d/dados/pfc3a'
+                  organization  is indexed
+                  access mode   is dynamic
+                  record key    is c3achave 
+                  file status   is ws-status.
+           select pfc3 assign   '/d/dados/pfc3'
+                  organization  is indexed
+                  access mode   is dynamic
+                  record key    is c3codigo
+                  file status   is ws-status.
+           select pfc3sap assign   '/d/dados/pfc3sap'
+                  organization  is indexed
+                  access mode   is dynamic
+                  record key    is c3sap-chave
+                  file status   is ws-status.
+           select pfc4g assign  '/d/dados/pfc4g'
+                  organization  is indexed
+                  access mode   is dynamic
+                  record key    is c4gcodigo
+                  file status   is ws-status.
+           select pfc4 assign  '/d/dados/pfc4'
+                  organization is indexed
+                  access mode  is dynamic
+                  record key   is c4codigo
+                  file status  is ws-status.
+           select pfc4rep assign  '/d/dados/pfc4rep'
+                  organization is indexed
+                  access mode  is dynamic
+                  record key   is c4r-chave
+		  alternate record key is c4r-cgc-vendedor
+		   with duplicates
+		  alternate record key is c4r-cpf-vendedor
+		   with duplicates
+		  alternate record key is c4r-codigo-filial
+		   with duplicates
+                  file status  is ws-status.
+           select pfc4s assign  '/d/dados/pfc4s'
+                  organization  is indexed
+                  access mode   is dynamic
+                  record key    is c4scodigo
+                  file status   is ws-status.
+           select pfc5 assign    '/d/dados/pfc5'
+                  organization   is indexed
+                  access mode    is dynamic
+                  record key     is c5chave  
+                  file status    is ws-status.
+           select pfc7 assign    '/d/dados/pfc7'
+                  organization   is indexed
+                  access mode    is dynamic
+                  record key     is c7chave
+                  file status    is ws-status.
+           select pfd4n assign    '/d/dados/pfd4n'
+                  organization    is indexed
+                  access mode     is dynamic
+                  record key      is d4nchave
+                  file status     is ws-status.
+           select pffecham  assign '/d/dados/pffecham'
+                  organization    is indexed
+                  access mode     is dynamic
+                  record key      is fecham-chave
+		  file status     is ws-status.
+           select pfm15 assign     '/d/dados/pfm15'
+                  organization     is indexed
+                  access mode      is dynamic
+                  record key       is m15chave
+                  file status      is ws-status.
+
+            select placaiti      assign      '/d/dados/placaiti'
+                   organization              is indexed
+                   access mode               is dynamic
+                   record key                is pli-chave
+		   alternate key             is pli-carro
+                   file status               is ws-status.   
+
+            select arqrej           assign   '/d/dados/plancrej'      
+                   organization              is indexed
+                   access mode               is dynamic
+                   record key                is arqrej-chave
+                   file status               is ws-status.          
+
+            select planilha01       assign   '/d/dados/planilha01'
+                   organization              is indexed
+                   access mode               is dynamic
+                   record key                is plc01-chave
+                   file status               is ws-status.      
+           select planilha02   assign '/d/dados/planilha02'
+                  organization       is indexed
+                  access mode        is dynamic
+                  record key         is plc02-chave
+	          file status        is ws-status.
+           select planilha03   assign '/d/dados/planilha03'
+                  organization       is indexed
+                  access mode        is dynamic
+                  record key         is plc03-chave
+	          file status        is ws-status.
+           select planilha03u   assign '/d/dados/planilha03u'
+                  organization       is indexed
+                  access mode        is dynamic
+                  record key         is plc03u-chave
+	          file status        is ws-status.
+           select planilha05   assign '/d/dados/planilha05'
+                  organization       is indexed
+                  access mode        is dynamic
+                  record key         is plc05-chave
+	          file status        is ws-status.
+           select planilha05u   assign '/d/dados/planilha05u'
+                  organization       is indexed
+                  access mode        is dynamic
+                  record key         is plc05u-chave
+	          file status        is ws-status.
+           select planilha06d   assign '/d/dados/planilha06d'
+                  organization       is indexed
+                  access mode        is dynamic
+                  record key         is plc06d-chave
+	          file status        is ws-status.
+           select planilha06h   assign '/d/dados/planilha06h'
+                  organization       is indexed
+                  access mode        is dynamic
+                  record key         is plc06h-chave
+	          file status        is ws-status.
+           select planilha06l   assign '/d/dados/planilha06l'
+                  organization       is indexed
+                  access mode        is dynamic
+                  record key         is plc06l-chave
+	          file status        is ws-status.
+           select planilha13   assign '/d/dados/planilha13'
+                  organization       is indexed
+                  access mode        is dynamic
+                  record key         is plc13-chave
+	          file status        is ws-status.
+           select planilha15   assign '/d/dados/planilha15'
+                  organization       is indexed
+                  access mode        is dynamic
+                  record key         is plc15-chave
+	          file status        is ws-status.
+
+            select planlib          assign   '/d/dados/planlib'     
+                   organization              is indexed
+                   access mode               is dynamic
+                   record key                is planlib-chave
+                   file status               is ws-status.         
+
+            select planvol          assign   '/d/dados/planvol'     
+                   organization              is indexed
+                   access mode               is dynamic
+                   record key                is plv01-chave
+                   file status               is ws-status.         
+
+            select plunifica01      assign   '/d/dados/plunifica01' 
+                   organization              is indexed
+                   access mode               is dynamic
+                   record key                is plun01-chave
+                   file status               is ws-status.     
+           select prodclas assign      '/d/dados/prodclas'
+                  organization         is indexed
+                  access mode          is dynamic
+                  record key           is pc-chave
+                  file status          is ws-status.
+      *------------------------------------------------------------------*
+	  
+	  select prodestb    assign  '/d/dados/prodestB'     
+                 organization        is indexed
+                 access mode         is dynamic
+                 record key          is prodestb-chave
+                 file status         is ws-status.   
+      *----------------------------------------------------------------*
+      *                   projeto sd x wms                             *
+      *                                                                *
+      *  objetivo: guardar o saldo do produtos em z5 no sap            *
+      *                                                                *
+      *                                                                *
+      *  programador:      adilson                                     *
+      *  area de producao: filial:/d/dados/produtz5                    *
+      *  area de backup:   ?                                           *
+      *  eh povoado pelo:  filial:/d/exec/fncwms13.int (funcao)        *
+      *                                                                *
+      *                                                                *
+      *----------------------------------------------------------------*
+
+        select produtz5   assign  '/d/dados/produtZ5' 
+	       organization       is indexed           
+	       access mode        is dynamic     
+	       record key         is prdz5-chave
+	       file status        is ws-status.   
+
+           select programas assign  '/d/dados/programas'
+                  organization     is indexed        
+                  access mode      is dynamic
+                  record key       is pg-chave
+		  alternate record is pg-nome with duplicates
+                  file status      is ws-status.
+           select progs   assign   '/d/dados/progs'
+                  organization     is indexed        
+                  access mode      is dynamic
+		  alternate record is prg-chamada
+				   with duplicates
+		  alternate record is prg-nome-real
+				   with duplicates
+                  record key       is prg-chave
+                  file status      is ws-status.
+		   
+	   select protodev   assign '/d/dados/protodev' 
+		  organization   is indexed
+		  access mode    is dynamic
+		  record key     is protodev-chave
+		  alternate record key is protodev-chave-alt
+		  file status    is ws-status.      
+           select qtdpedcli assign '/d/dados/qtdpedcli'
+                  organization    is indexed
+                  access mode     is dynamic
+                  record key      is qpc-chave
+                  file status     is ws-status.
+      *|---|---------------------------|-------------------------------|
+      *            projeto eliminar espelho a4 por etiqueta.          *
+      *                                                               *
+      * objetivo ...: armazenar intervalo de caixas validas.          *
+      * sistema ....: wms                                             *
+      * logistica ..: gustavo pires.                                  *
+      * gerente ....:                                                 *
+      * programador.: otavio                                          *
+      * data .......: 06/abr/2022                                     *
+      *                                                               *
+      *|---|---------------------------|-------------------------------|
+
+	   select regcaixa    assign        '/d/dados/regcaixa'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is rgcx-sequencia
+		  alternate record key      is rgcx-cxinicio = 
+						    rgcx-tipo
+						    rgcx-caixainicio
+		  alternate record key      is rgcx-cxfinal =
+						    rgcx-tipo
+						    rgcx-caixafinal 
+                  file status               is ws-status.
+    
+           select relacmsg assign to   ws-relacmsg
+                  organization         is indexed
+                  access mode          is dynamic
+                  record key           is rlcmsg-chave
+		  alternate record key is rlcmsg-chave-alt
+		  file status          is ws-status.
+           select retencao assign '/d/dados/retencao'
+		  organization    is indexed
+		  access mode     is dynamic
+		  record key      is ret-chave
+		  file status     is ws-status.
+           select retsap assign '/d/dados/retencaosap'
+		  organization    is indexed
+		  access mode     is dynamic
+		  record key      is retsap-chave
+		  file status     is ws-status.   
+           select rota assign      '/d/dados/rotas'
+		  organization     is indexed
+		  access mode      is dynamic
+		  record key       is rot-chave
+		  file status      is ws-status.
+           select rotastp assign   '/d/dados/rotastp'
+		  organization     is indexed
+		  access mode      is dynamic
+		  record key       is rtp-chave
+		  file status      is ws-status.
+           select rotastr assign   '/d/dados/rotastr'
+		  organization     is indexed
+		  access mode      is dynamic
+		  record key       is rtt-chave
+		  file status      is ws-status.
+
+           select saldopend  assign '/d/dados/saldopend'
+                  organization      is indexed
+                  access mode       is dynamic
+                  record key        is sldp-chave
+                  file status       is ws-status.
+
+      *----------------------------------------------------------------*
+      *                   projeto sd x wms                             *
+      *                                                                *
+      *  objetivo: guardar o saldo da rua z estoque (wms).             *
+      *                                                                *
+      *                                                                *
+      *  programador:      otavio                                      *
+      *  area de producao: filial:/d/dados/saldwmsz                    *
+      *  area de backup:   ?                                           *
+      *  eh povoado pelo:  filial:/d/exec/fncwms13.int (funcao)        *
+      *                                                                *
+      *                                                                *
+      *----------------------------------------------------------------*
+
+        select saldwmsz   assign  '/d/dados/saldwmsz' 
+	       organization       is indexed           
+	       access mode        is dynamic     
+	       record key         is slz-chave
+	       file status        is ws-status.   
+
+           select scfuncao    assign        '/d/dados/scfuncao'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is scsn-chave
+                  file status               is ws-status.
+    
+           select scsconfg    assign        '/d/dados/scsconfg'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is scsg-chave
+                  file status               is ws-status.
+    
+      *|---|---------------------------|-------------------------------|
+      *            projeto lean - picking conferencia de caixa        *
+      *                                                               *
+      * objetivo ...: cadastro das redes e/ou clientes para conferen- *
+      *               cia de caixa e lacre.                           *
+      * sistema ....: wms                                             *
+      * logistica ..: gustavo pires.                                  *
+      * gerente ....:                                                 *
+      * programador.: otavio                                          *
+      * data .......: 29/jan/2020                                     *
+      *                                                               *
+      *|---|---------------------------|-------------------------------|
+
+	   select scscxcli    assign        '/d/dados/scscxcli'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is scsc-chave
+                  file status               is ws-status.
+    
+      *|---|---------------------------|-------------------------------|
+      *            projeto lean - picking conferencia de caixa        *
+      *                                                               *
+      * objetivo ...: cadastro das estacoes liberadas para conferencia*
+      *               de caixa e lacre.                               *
+      * sistema ....: wms                                             *
+      * logistica ..: gustavo pires.                                  *
+      * gerente ....:                                                 *
+      * programador.: otavio                                          *
+      * data .......: 19/nov/2019                                     *
+      *                                                               *
+      *|---|---------------------------|-------------------------------|
+
+	   select scscxemb    assign        '/d/dados/scscxemb'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is scsx-chave
+                  file status               is ws-status.
+    
+           select scsfunci    assign        '/d/dados/scsfunci'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is scsf-chave
+                  file status               is ws-status.
+    
+           select scsfunst    assign        '/d/dados/scsfunst'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is scss-chave
+                  file status               is ws-status.
+    
+           select scslbset    assign        '/d/dados/scslbset'
+                  organization              is indexed
+                  access mode               is dynamic
+                  record key                is scsb-chave
+                  file status               is ws-status.
+    
+	   select subsetor assign '/d/dados/subsetor'  
+		  organization    is indexed
+		  access mode     is dynamic
+		  record key      is subsetor-chave
+		  file status     is ws-status.  
+	   select supcard00c assign    '/d/dados/supcard00c'  
+		  organization         is indexed
+		  access mode          is dynamic
+		  record key           is sc00-chave        
+		  file status          is ws-status.  
+	   select supcard04c  assign '/d/dados/supcard04c'   
+		  organization      is indexed
+		  access mode       is dynamic
+		  record key        is sc04-chave        
+		  file status       is ws-status.   
+	   select supcard11  assign    '/d/dados/supcard11'   
+		  organization         is indexed
+		  access mode          is dynamic
+		  record key           is sc11-chave        
+		  file status          is ws-status.  
+
+           select tabaltusu      assign '/d/dados/tabaltusu'
+                  organization  is indexed
+                  access mode   is dynamic
+		  record key    is tabaltus-chave
+                  file status   is ws-status.
+
+           select tabusu      assign '/d/dados/tabcadusu'
+                  organization  is indexed
+                  access mode   is dynamic
+		  record key    is tabus-chave
+                  file status   is ws-status.
+           select tabelmsg      assign '/d/dados/tabelmsg'
+                  organization      is indexed
+                  access mode       is dynamic
+                  record key        is tblmsg-chave
+		  file status       is ws-status.
+           select tabimpsetor     assign '/d/dados/tabimpsetor'
+                  organization    is indexed
+                  access mode     is dynamic
+                  record key      is tabimpsetor-chave
+                  file status     is ws-status.
+           select tablc    assign '/d/dados/tablotecasa'
+	          organization   is indexed
+	          access mode    is dynamic
+	          record key     is tablc-chave
+		  file status    is ws-status.       
+           select tabreimp  assign '/d/dados/tabreimp' 
+	          organization   is indexed
+	          access mode    is dynamic
+	          record key     is tabreimp-chave
+		  file status    is ws-status.   
+           select tipocli assign '/d/dados/tipocli'
+		  organization   is indexed
+		  access mode    is dynamic
+		  record key     is tc-tipocli
+		  file status    is ws-status.
+           select arq-totvs     assign      '/d/dados/totvs'
+		  organization              is line sequential
+		  access mode               is sequential
+*		  record key                is chave-01
+		  file  status              is ws-status.
+
+
+           select usuariosn assign '/d/dados/ussenha'
+                  organization  is indexed
+                  access mode   is random 
+		  record key    is us-chaven
+                  file status   is ws-status.
+
+           select usuarios assign '/d/dados/usuarios'
+                  organization  is indexed
+                  access mode   is dynamic
+		  record key    is us-chave
+                  alternate record key is us-chave-programas
+                              with duplicates
+                  file status   is ws-status.
+           select vendas assign '/d/dados/vendas' 
+                  organization  is indexed
+                  access mode   is dynamic
+                  record key    is vd-chave
+                  file status   is ws-status.
+           select vndativo    assign '/d/dados/vndativo'     
+                  organization        is indexed
+                  access mode         is dynamic
+                  record key          is vnda-cliente
+                  file status         is ws-status.   
+
+            select xcdev01       assign   '/d/dados/xcdev01'
+                   organization              is indexed
+                   access mode               is dynamic
+                   record key                is xcd01-chave
+                   file status               is ws-status.      
+           select xcdev02   assign '/d/dados/xcdev02'
+                  organization       is indexed
+                  access mode        is dynamic
+                  record key         is xcd02-chave
+	          file status        is ws-status.

@@ -1,0 +1,9 @@
+:root {
+    --md-primary-fg-color:        #35A7C5;
+}
+a.md-header__button.md-logo > img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;  
+  height: 80px;
+}

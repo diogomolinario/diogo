@@ -3,9 +3,7 @@ name: Publish docs via GitHub Pages
 on:
   push:
     branches:
-      - master
       - main
-      - mkdocs-experimental
   workflow_dispatch:
 
 jobs:
@@ -44,7 +42,7 @@ jobs:
           ENABLE_PDF_EXPORT: 1
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: diogo/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site

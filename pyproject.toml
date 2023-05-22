@@ -1,13 +1,17 @@
 [tool.poetry]
-name = "diogo"
+name = "profarma"
 version = "0.1.0"
 description = ""
-authors = ["diogomolinario <molinariob@hotmail.com>"]
+authors = ["Renato Carnauba <contato@renatocarnauba.com.br>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
 
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.4.2"
+mkdocs-material = "^9.1.4"
 
 [build-system]
 requires = ["poetry-core"]

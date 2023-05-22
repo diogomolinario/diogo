@@ -1,8 +1,8 @@
 site_name: Documentação
 site_url: ""
-use_directory_urls: true
+use_directory_urls: false
 copyright: |
-  Copyright &copy; 2023 <a href="https://www.flts.com.br" target="_blank" rel="noopener">Fastlane Technology Solutions</a>
+ Copyright &copy; 2023 <a href="https://www.flts.com.br" target="_blank" rel="noopener">Fastlane Technology Solutions</a>
 theme:
   language: pt-BR
   features:
@@ -32,13 +32,13 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: "tag:yaml.org,2002:python/name:materialx.emoji.twemoji"
+      emoji_generator: "tag:yaml.org,2002:python/name:materialx.emoji.to_svg"
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid 
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+          format: tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format"
 
   - pymdownx.highlight:
       anchor_linenums: true

@@ -1,0 +1,26 @@
+{
+    "python.testing.pytestArgs": [
+        "."
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "markdown.extension.pymdownx.emoji": {
+        "emoji_generator": "python",
+        "emoji_index": "https://raw.githubusercontent.com/ikatyang/emoji-cheat-sheet/master/README.md",
+        "alt": "short",
+        "options": {
+            "attributes": {
+                "align": "absmiddle",
+                "height": "20px",
+                "width": "20px"
+            }
+        }
+    },
+    "markdown.extension.toc.omittedFromToc": {
+
+    },
+    "yaml.schemas": {
+        "file:///c%3A/Users/molin/.vscode/extensions/docsmsft.docs-yaml-1.0.0/dist/toc.schema.json": "/toc\\.yml/i",
+        "https://json.schemastore.org/mkdocs-1.0.json": "file:///c%3A/Users/molin/Documents/git/diogo/mkdocs.yml"
+    }
+}

@@ -32,13 +32,16 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - pymdownx.emoji:
-      emoji_index: "tag:yaml.org,2002:python/name:materialx.emoji.twemoji"
-      emoji_generator: "tag:yaml.org,2002:python/name:materialx.emoji.to_svg"
+      emoji_generator: !!python/name:pymdownx.emoji.twemoji.to_svg
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+#  - pymdownx.emoji:
+#      emoji_index: tag:yaml.org,2002:python/name:materialx.emoji.twemoji
+#      emoji_generator: tag:yaml.org,2002:python/name:materialx.emoji.to_svg
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid 
           class: mermaid
-          format: tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format"
+          format: tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format
 
   - pymdownx.highlight:
       anchor_linenums: true

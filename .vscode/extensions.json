@@ -1,5 +1,6 @@
 {
     "recommendations": [
         "github.vscode-pull-request-github",
-        "pymdownx.emoji"    ]
+        "pymdownx.emoji"
+    ]
 }

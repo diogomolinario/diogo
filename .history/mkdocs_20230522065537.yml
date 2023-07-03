@@ -67,14 +67,12 @@ markdown_extensions:
 nav:
   - Levantamento:
     - index.md
-##    - Acesso Interno: access-interno.md
     - Acesso: access.md
     - Ambiente: ambiente.md
     - Teste Básico: testeBasico.md
     - Pontos de Atenção: alert.md
   - Implantação:
     - Configuração PuTTY: confPutty.md
-    - Extras: extras.md
     - Migração Sistema Operacional: migracaoSO.md
     - Configuração COBOL: configAmbienteCobol.md
     - Levantamento Impacto: levantamentoImpacto.md

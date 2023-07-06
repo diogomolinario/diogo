@@ -67,7 +67,7 @@ markdown_extensions:
 nav:
   - Levantamento:
     - index.md
-    - Acesso Interno: access-interno.md
+##    - Acesso Interno: access-interno.md
     - Acesso: access.md
     - Ambiente: ambiente.md
     - Teste Básico: testeBasico.md
@@ -78,6 +78,8 @@ nav:
     - Migração Sistema Operacional: migracaoSO.md
     - Configuração COBOL: configAmbienteCobol.md
     - Levantamento Impacto: levantamentoImpacto.md
+    - Pontos de Atenção: alertImplant.md
+    
 
 
 
